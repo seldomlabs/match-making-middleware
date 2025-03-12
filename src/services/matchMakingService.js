@@ -20,7 +20,7 @@ async function getMatchedUser(userId, lat, lon, matchRadius) {
     }
 
     logger.info(`Matchmaking successful for user ${userId}, Matched User ID: ${response.data.matchedUserId}`);
-    return response.data.matchedUserId;
+    return response.data;
   } catch (error) {
     logger.error("Matchmaking API Call Failed", { error: error });
 
